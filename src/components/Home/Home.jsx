@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { Profile } from "../Profile/Profile";
 
 export const Home = () => {
   const [inputText, setInputText] = useState("");
-  const [savedData, setSavedData] = useState(false);
-
+  const [savedData, setSavedData] = useState(true);
   const handleInputText = (e) => {
     const text = e.target.value;
     setInputText(text);
