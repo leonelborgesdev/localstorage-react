@@ -10,11 +10,16 @@ export const Home = () => {
     const text = e.target.value;
     setInputText(text);
     console.log(text.length);
+    localStorage.setItem("nombre", inputText);
     if (text.length === 1) setSavedData(false);
   };
   const saveData = () => {
     localStorage.setItem("nombre", inputText);
     setSavedData(true);
+  };
+  const borrarData = () => {
+    localStorage.removeItem("nombre");
+    setSavedData(false);
   };
   return (
     <div className="container">
@@ -24,9 +29,14 @@ export const Home = () => {
         placeholder="Ingresa tu nombre.."
         className="input"
       />
-      <button className="button" onClick={saveData}>
-        Guardar
-      </button>
+      <div className="container_buton">
+        <button className="button" onClick={saveData}>
+          Guardar
+        </button>
+        <button className="borrar" onClick={borrarData}>
+          Borrar
+        </button>
+      </div>
 
       {savedData && <Profile />}
     </div>
