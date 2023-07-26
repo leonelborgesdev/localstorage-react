@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-export const Profile = () => {
-  const [nombre, setNombre] = useState("");
+export const Profile = ({ name = "" }) => {
+  const [nombre, setNombre] = useState(name);
   const getData = () => {
     const texto = localStorage.getItem("nombre");
     console.log(texto);
