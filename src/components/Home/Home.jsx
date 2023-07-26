@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { Profile } from "../Profile/Profile";
+import { Nav } from "../Nav/Nav";
 
 export const Home = () => {
   const [inputText, setInputText] = useState("");
@@ -22,6 +23,7 @@ export const Home = () => {
   };
   return (
     <div className="container">
+      <Nav />
       <input
         type="text"
         onChange={handleInputText}

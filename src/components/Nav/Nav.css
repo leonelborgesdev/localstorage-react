@@ -1,0 +1,6 @@
+.container_link{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

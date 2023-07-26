@@ -1,5 +1,11 @@
 import React from "react";
+import { Nav } from "../Nav/Nav";
 
 export const About = () => {
-  return <div>About</div>;
+  return (
+    <div>
+      <Nav />
+      About
+    </div>
+  );
 };

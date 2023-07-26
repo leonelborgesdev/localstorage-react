@@ -1,5 +1,11 @@
 import React from "react";
+import { Nav } from "../Nav/Nav";
 
 export const Lore = () => {
-  return <div>Lore</div>;
+  return (
+    <div>
+      <Nav />
+      Lore
+    </div>
+  );
 };
